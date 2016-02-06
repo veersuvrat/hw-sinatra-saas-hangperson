@@ -1,1 +1,1 @@
-https://damp-sands-22216.herokuapp.com/
+damp-sands-22216.herokuapp.com

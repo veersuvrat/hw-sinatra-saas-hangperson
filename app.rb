@@ -73,12 +73,24 @@ class HangpersonApp < Sinatra::Base
   
   get '/win' do
     ### YOUR CODE HERE ###
-    erb :win # You may change/remove this line
+    game_curr = session[:game]
+    win_lose_sym = game_curr.check_win_or_lose
+    if not win_lose_sym == :win
+      redirect '/show'
+    else
+      erb :win
+    end
   end
   
   get '/lose' do
     ### YOUR CODE HERE ###
-    erb :lose # You may change/remove this line
+    game_curr = session[:game]
+    win_lose_sym = game_curr.check_win_or_lose
+    if not win_lose_sym == :lose
+      redirect '/show'
+    else
+      erb :lose
+    end
   end
   
 end
